@@ -46,6 +46,12 @@ struct ContentView: View {
 
         }
     }
+    func deleteFriend(at offsets : IndexSet){
+        for index in offsets{
+            let friendToDelete = friends[index]
+            context.delete(friendToDelete)
+        }
+    }
 }
 
 #Preview {
